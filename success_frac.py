@@ -6,12 +6,13 @@ from scipy.interpolate import interp1d
 import numpy as np
 import sys
 
+###############
 
 file_no = input("Enter the number of simulated light curves in your directory:")
 
-#file_name = input("Enter your file name")
+###############
 
-file = open('gamma_whole_sort.txt')
+file = open('gamma_whole_sort.txt') # Your file name!
 lines = file.readlines()
 data = np.loadtxt(lines)
 
@@ -36,7 +37,7 @@ plt.plot(reg_Time, reg_flux, 'm^')
 #print(reg_flux.size)
 #print(flux.size)
 
-np.savetxt("4C_gamma_resample.dat", np.transpose([reg_Time, reg_flux]), fmt="%e\t%e")
+np.savetxt("gamma_resample.dat", np.transpose([reg_Time, reg_flux]), fmt="%e\t%e") # you can change the file name here!
 
 plt.show()
 ###################
