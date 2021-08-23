@@ -59,14 +59,7 @@ for j in range(freq_number):
 	psd_obs[j] = pxx_den_obs[j+1]
 
 
-####################
-#file2 = open("periodogram_obs_4C+28.txt")
-#lines = file2.readlines()
-#data2 = np.loadtxt(lines)
-
-#freq = data2[:,0]
-#psd_obs2 = data2[:,1]
-####################
+###################
 
 t = np.zeros((file_no,freq_number,2)) #20
 t_sq = np.zeros((file_no,freq_number,2))
